@@ -1,4 +1,4 @@
-import AppHeader from './app-header.vue';
+import AppHeader from './app-header/app-header.vue';
 
 
 export {

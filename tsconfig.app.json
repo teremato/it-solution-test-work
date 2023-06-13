@@ -6,7 +6,9 @@
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@icons/*": ["./src/shared/assets/icons/*"],
+      "@images/*": ["./src/shared/assets/images/*"],
     }
   }
 }
