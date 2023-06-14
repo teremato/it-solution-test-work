@@ -1,0 +1,7 @@
+.home-view {
+    @apply mt-[53px];
+}
+
+.home-view .home-view__add-car {
+    @apply bg-[url('@images/ill_add-car.svg')] bg-no-repeat bg-right
+}

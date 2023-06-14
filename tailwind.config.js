@@ -8,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'green-v1': '#9cc634',
-        'green-v2': '#A6C34F',
-        'primary-v1': '#072446',
-        'primary-2': '#0D2444'
+        'green': '#A6C34F',
+        'light-green': '#9cc634',
+        'primary': '#0D2444',
+        'light-primary': '#072446',
+        'border': '#CCCCCC',
       },
       fontFamily: {
         sans: ['Roboto'],

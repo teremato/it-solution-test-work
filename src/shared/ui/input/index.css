@@ -1,0 +1,21 @@
+.app__input-field {
+    @apply flex items-center relative rounded-[5px] h-[20px]
+        border-border border-solid border-[1px];
+}
+
+.app__input-field .app__input-label {
+    @apply absolute top-[-45%] left-[5px] z-10
+        text-primary font-bold text-[10px] leading-[12px]
+        bg-white pl-[5px] pr-[5px];
+}
+
+.app__input-field .app__input {
+    @apply text-[10px] h-full w-full outline-none ml-[5px] mr-[5px];
+}
+
+.app__input-field.app__input-sm {
+    @apply w-[100px];
+}
+.app__input-field.app__input-md {
+    @apply w-[162px];
+}

@@ -1,0 +1,6 @@
+.add-car__form {
+    @apply w-min;
+}
+.add-car__form-top {
+    @apply grid grid-cols-4 grid-rows-3 w-max gap-x-[30px] gap-y-[17px]
+}

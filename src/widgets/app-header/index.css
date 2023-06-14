@@ -1,0 +1,59 @@
+/* app-header */
+.app__header {
+    @apply relative h-[70px] sm:h-[94px];
+}
+
+/* app-header left side */
+.app__header-left {
+    @apply flex items-center h-[70px] rounded-bl-[10px] bg-light-green;
+}
+
+.app__header-left .app__header-contacts {
+    @apply flex flex-col text-white w-max ml-[17px] sm:ml-[84px];
+}
+
+.app__header-left .app__header-contacts-item {
+    @apply flex items-center gap-[17px];
+}
+
+/* app-header right-side */
+.app__header-right {
+    @apply absolute right-0 top-0 h-full w-[157px]
+        sm:w-[740px] bg-light-primary
+        rounded-bl-[270px] sm:rounded-bl-[293px];
+}
+
+.app__header-right .app__header-wrapper {
+    @apply flex flex-col justify-between h-full 
+        ml-[100px] mr-[25px];
+}
+
+.app__header-right .app__header-sociaty {
+    @apply flex items-center gap-[14px];
+}
+
+.app__header-right .app__header-top {
+    @apply flex mt-[12px];
+}
+
+.app__header-right .app__header-logo {
+    @apply flex justify-center w-full;
+}
+
+.app__header-right .app__header-nav {
+    @apply flex mb-[6px];
+}
+
+.app__header-right .app__header-list {
+    @apply flex items-center justify-between w-full text-white;
+}
+
+.app__header-right .app__header-list-item {
+    @apply font-bold text-[12px] leading-[14px] uppercase;
+}
+.app__header-right .app__header-list-item.active {
+    
+    @apply relative after:content-[''] after:absolute after:bottom-[-100%] 
+        after:left-0 after:rounded-bl-[10px] after:rounded-tl-[10px]
+        after:bg-light-green after:h-[4px] after:w-full;
+}

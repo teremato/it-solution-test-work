@@ -1,43 +1,43 @@
 <template>
-    <header class="relative h-[94px]">
-        <div class="flex flex-col justify-center 
-            h-[70px] max-w-full 
-            rounded-bl-[10px] bg-green-v1">
-            <div class="ml-[84px]">
-                <span class="flex gap-[17px] mb-[10px]
-                    font-semibold text-[14px] text-white leading-[16.41px]">
-                    <img src="@icons/i__phone.svg" alt="">
+    <header class="app__header">
+        <div class="app__header-left">
+            <div class="app__header-contacts">
+                <span class="app__header-contacts-item">
+                    <img src="@icons/i__phone.svg" alt="contact-phone">
                     +372 43675 476
                 </span>
-                <span class="flex gap-[17px] 
-                    font-semibold text-[14px] text-white leading-[16.41px]">
-                    <img src="@icons/i__mail.svg" alt="">
+                <span class="app__header-contacts-item">
+                    <img src="@icons/i__mail.svg" alt="contact-phone">
                     info@example.ee
                 </span>
             </div>
         </div>
-        <div class="flex flex-col justify-between absolute top-0 right-0 h-full w-[740px]
-            rounded-bl-[270px] bg-primary-v1">
-            <div class="flex mt-[12px]">
-                <span class="flex justify-center w-full">
-                    <img class="self-end" src="@images/logo.png" alt="logo">
-                </span>
-                <div class="flex gap-[14px] mr-[25px]">
-                    <img src="@icons/i__facebook.svg" alt="facebook">
-                    <img src="@icons/i__vk.svg" alt="vk">
-                </div>
-            </div>
-            <nav>
-                <ul class="flex justify-end items-center gap-[23px] mb-[5px]">
-                    <li v-for="path in paths" :key="path.path"
-                        class="font-bold leading-[16px] text-white">
-                        {{ path.label }}
-                    </li>
-                    <span class="mr-[25px]">
-                        <img src="@icons/i__ru-flag.svg" alt="rus-lang">
+        <div class="app__header-right">
+            <div class="app__header-wrapper">
+                <div class="app__header-top">
+                    <span class="app__header-logo">
+                        <img class="" src="@images/logo.png" alt="logo">
                     </span>
-                </ul>
-            </nav>
+                    <div class="app__header-sociaty">
+                        <img src="@icons/i__facebook.svg" alt="facebook">
+                        <img src="@icons/i__vk.svg" alt="vk">
+                    </div>
+                </div>
+                <nav class="app__header-nav">
+                    <ul class="app__header-list">
+                        <li v-for="(path, idx) in paths" :key="path.path"
+                            :class="[
+                                'app__header-list-item',
+                                { 'active':  idx === 0}
+                            ]">
+                            <a :href="path.path">{{ path.label }}</a>
+                        </li>
+                        <span>
+                            <img src="@icons/i__ru-flag.svg" alt="rus-lang">
+                        </span>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 </template>
@@ -45,16 +45,15 @@
 <script setup lang="ts">
 
 const paths: { label:string, path: string }[] = [
-    { label: 'Главная', path: '/' },
-    { label: 'О нас', path: '/about' },
-    { label: 'Отправьте нам предложение', path: '/feedback' },
-    { label: 'ЧЗВ', path: '/chzf' },
-    { label: 'Блог', path: '/blog' },
-    { label: 'Контакты', path: 'contacts' },
+    { label: 'главная ', path: '/' },
+    { label: 'о нас', path: '/about' },
+    { label: 'отправьте нам предложение', path: '/feedback' },
+    { label: 'чзв', path: '/chzf' },
+    { label: 'блог', path: '/blog' },
+    { label: 'контакты', path: 'contacts' },
 ]
 
 </script>
 
-<style scoped>
-
+<style lang="css" src="./index.css">
 </style>

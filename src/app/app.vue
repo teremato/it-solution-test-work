@@ -1,11 +1,14 @@
 <template>
-    <div class="min-h-screen font-sans:!important">
+    <div class="min-h-screen">
         <app-header/>
+        <home-view/>
     </div>
 </template>
 
 <script setup lang="ts">
 import { AppHeader } from '@/widgets';
+import { HomeView } from '@/views';
+
 
 </script>
 

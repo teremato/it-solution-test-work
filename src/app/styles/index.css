@@ -4,3 +4,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    img {
+        display: block;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply bg-green text-white rounded-[5px]
+            text-[10px] font-bold leading-[12px] w-full
+    }
+}
+
+@layer utilities {
+    .sub-title {
+        @apply text-[18px] leading-[20px] text-primary;
+    }
+}

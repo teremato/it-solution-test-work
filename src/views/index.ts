@@ -1,4 +1,4 @@
-import HomeView from './home-view.vue';
+import HomeView from './home-view/home-view.vue';
 
 
 export {
