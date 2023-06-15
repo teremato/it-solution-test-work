@@ -6,7 +6,7 @@
 .app__input-field .app__input-label {
     @apply absolute top-[-45%] left-[5px] z-10
         text-primary font-bold text-[10px] leading-[12px]
-        bg-white pl-[5px] pr-[5px];
+        bg-white rounded-[5px] pl-[5px] pr-[5px];
 }
 
 .app__input-field .app__input {
@@ -25,5 +25,8 @@
     @apply w-[162px];
 }
 .app__input-field.app__input-lg {
-    @apply w-[190px]
+    @apply w-[190px];
+}
+.app__input-field.app__input-block {
+    @apply w-full;
 }

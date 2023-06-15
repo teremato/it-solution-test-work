@@ -1,8 +1,11 @@
 <template>
     <main class="home-view">
         <section class="home-view__add-car">
-            <div class="home-view__add-car-wrapper">
+            <div class="sm:flex sm:flex-col sm:justify-center">
                 <add-car-form />
+                <div v-if="!isMobile" class="bg-[url('@images/ill_add-car.svg')] mt-[20px]">
+                    <img class="opacity-0" src="@images/ill_add-car.svg" alt="Добавить авто">
+                </div>
             </div>
         </section>
 
@@ -28,34 +31,34 @@
                         О нас
                     </h1>
                     <h3 class="text-[18px] font-bold leading-[21px] text-primary mb-[19px] block">
-                        Мы действуем на рынке автомобилей уже много лет и<br/>
+                        Мы действуем на рынке автомобилей уже много лет и<br class="sm:hidden"/>
                         знаем как оформить сделку быстро и без проблем.
                     </h3>
                     <p class="text-[12px] leading-[14px] text-primary mb-[39px]">
-                        Первое, что следует сделать заинтересованному в продаже машины человеку –<br/>
-                        связаться с нами, заполнив контактную форму на сайте или позвонив по<br/>
-                        телефону. На основании полученного со слов описания машины мы назовем<br/> 
-                        предварительную стоимость. Точное ценовое предложение станет известно после<br/> 
-                        проведения оценки, которую выполнит наш специалист, выехав для этого в удобное<br/> 
+                        Первое, что следует сделать заинтересованному в продаже машины человеку –<br class="sm:hidden"/>
+                        связаться с нами, заполнив контактную форму на сайте или позвонив по<br class="sm:hidden"/>
+                        телефону. На основании полученного со слов описания машины мы назовем<br class="sm:hidden"/> 
+                        предварительную стоимость. Точное ценовое предложение станет известно после<br class="sm:hidden"/> 
+                        проведения оценки, которую выполнит наш специалист, выехав для этого в удобное<br class="sm:hidden"/> 
                         для клиента место.
                     </p>
                 </header>
-                <ul>
-                    <li class="flex items-center gap-[13px] mb-[47px]">
+                <ul class="sm:flex">
+                    <li class="flex items-center gap-[13px] mb-[47px] sm:flex-col">
                         <img src="@icons/i__premium.svg" alt="Высокие цены">
-                        <span class="font-bold text-[17px] leading-[18px]">
+                        <span class="font-bold text-[17px] leading-[18px] sm:text-center">
                             Предлагаем самые высокие<br/> цены
                         </span>
                     </li>
-                    <li class="flex items-center gap-[13px] mb-[43px]">
+                    <li class="flex items-center gap-[13px] mb-[43px] sm:flex-col">
                         <img src="@icons/i__edit-doc.svg" alt="Оформляем на месте">
-                        <span class="font-bold text-[17px] leading-[18px]">
+                        <span class="font-bold text-[17px] leading-[18px] sm:text-center">
                             Оформляем документы прямо на<br/> месте
                         </span>
                     </li>
-                    <li class="flex items-center gap-[13px]">
+                    <li class="flex items-center gap-[13px] sm:flex-col">
                         <img src="@icons/i__like.svg" alt="В любом состоянии">
-                        <span class="font-bold text-[17px] leading-[18px]">
+                        <span class="font-bold text-[17px] leading-[18px] sm:text-center">
                             Выкупаем машины в любом<br/> состоянии
                         </span>
                     </li>
@@ -107,47 +110,47 @@
                     </li>
                 </ul>
             </div>
-            <ul class="self-end">
+            <ul class="self-end sm:self-start">
                 <li class="flex items-align gap-[19px] mb-[23px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Машину не надо подготавливать <br/>к продаже
+                        Машину не надо подготавливать <br class="sm:hidden"/>к продаже
                     </span>
                 </li>
                 <li class="flex items-align gap-[19px] mb-[23px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Покупаем машины любого года выпуска и в<br/> любом состоянии
+                        Покупаем машины любого года выпуска и в<br class="sm:hidden"/> любом состоянии
                     </span>
                 </li>
                 <li class="flex items-align gap-[19px] mb-[23px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Покупаем машины без техосмотра и<br/>страховки
+                        Покупаем машины без техосмотра и<br class="sm:hidden"/>страховки
                     </span>
                 </li>
                 <li class="flex items-align gap-[19px] mb-[23px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Покупаем машины не работающие и<br/> нуждающиеся в ремонте
+                        Покупаем машины не работающие и<br class="sm:hidden"/> нуждающиеся в ремонте
                     </span>
                 </li>
                 <li class="flex items-align gap-[19px] mb-[23px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Предложим за вашу машину больше<br/> остальных
+                        Предложим за вашу машину больше<br class="sm:hidden"/> остальных
                     </span>
                 </li>
                 <li class="flex items-align gap-[19px] mb-[23px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Сразу же выплачиваем<br/> деньги
+                        Сразу же выплачиваем<br class="sm:hidden" /> деньги
                     </span>
                 </li>
                 <li class="flex items-align gap-[19px]">
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
                     <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Работаем по всей Эстонии и сами<br/> выезжаем на место
+                        Работаем по всей Эстонии и сами<br class="sm:hidden" /> выезжаем на место
                     </span>
                 </li>
             </ul>
@@ -160,6 +163,10 @@ import {
     AddCarForm,
     AppVariantsSlider
 } from '@/widgets';
+import { useWindowResize } from '@/shared/hooks';
+
+
+const { isMobile } = useWindowResize();
 
 </script>
 

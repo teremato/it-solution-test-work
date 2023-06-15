@@ -1,13 +1,13 @@
 <template>
     <fieldset :class="[
         'app__input-field',
-        `app__input-${size}`
+        `app__input-${size}`,
     ]">
         <legend class="app__input-label">
             {{ label }}
             <span v-if="requried" class="app__input-required"></span>
         </legend>
-        <input class="app__input" 
+        <input class="app__input"
             :placeholder="placeholder"
             :name="name"
             type="text">
@@ -21,8 +21,7 @@ interface IProps {
     placeholder?: string,
     name?: string,
     requried?: boolean,
-    block?: boolean
-    size?: 'sm' | 'md' | 'lg',
+    size?: 'sm' | 'md' | 'lg' | 'block',
 }
 
 withDefaults(defineProps<IProps>(), {
@@ -30,7 +29,7 @@ withDefaults(defineProps<IProps>(), {
     placeholder: '',
     requried: false,
     block: false,
-    size: 'sm'
+    size: 'block'
 })
 
 </script>

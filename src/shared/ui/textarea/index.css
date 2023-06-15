@@ -6,9 +6,10 @@
 .app__textarea-field .app__textarea-label {
     @apply absolute bottom-[95%] left-[5px] z-10
         text-primary font-bold text-[10px] leading-[12px]
-        bg-white pl-[5px] pr-[5px];
+        bg-white pl-[5px] pr-[5px] rounded-[5px];
 }
 
 .app__textarea-field .app__textarea {
-    @apply text-[10px] h-full w-full outline-none ml-[5px] mr-[5px] resize-none;
+    @apply text-[10px] h-full w-full outline-none rounded-[5px]
+        pl-[5px] pr-[5px] resize-none;
 }

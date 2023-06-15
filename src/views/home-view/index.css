@@ -3,7 +3,8 @@
 }
 
 .home-view .home-view__add-car {
-    @apply bg-[url('@images/ill_add-car.svg')] bg-no-repeat bg-right 
+    @apply bg-[url('@images/ill_add-car.svg')] bg-no-repeat bg-right
+        sm:bg-bottom sm:bg-none
 }
 
 .home-view .home-view__variants {
@@ -18,7 +19,9 @@
 .home-view .home-view__about {
     @apply bg-[url('@images/ill_about.png')] bg-no-repeat bg-right-bottom
         h-[597px] mr-[15px] ml-[74px] mb-[95px]
+        sm:h-full sm:bg-none sm:mr-[20px] sm:ml-[20px]
 }
 .home-view .home-view__company {
     @apply flex justify-between gap-[49px] h-[385px] mr-[41px] ml-[74px] mb-[129px]
+        sm:h-auto sm:ml-[20px] sm:mr-[20px] sm:justify-normal sm:flex-col
 }

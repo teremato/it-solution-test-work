@@ -1,11 +1,12 @@
 <template>
     <footer>
-        <div class="bg-light-primary h-[152px]">
-            <div class="grid grid-cols-4 h-full text-white">
+        <div class="bg-light-primary h-[152px] sm:h-full">
+            <div class="grid grid-cols-4 h-full text-white
+                sm:grid-cols-1 sm:justify-items-center">
                 <h1 class=" m-auto text-[48px] leading-[55px]">
                     LOGO
                 </h1>
-                <section class="self-start mt-[35px]">
+                <section class="self-center mt-[35px] sm:text-center">
                     <h3 class="font-bold text-[14px] leading-[16px] mb-[10px]">Company name</h3>
                     <ul>
                         <li class="text-[14px] leading-[16px] mb-[7px]">Reg. nr: 437568</li>
@@ -14,10 +15,11 @@
                         </li>
                     </ul>
                 </section>
-                <section class="self-start mt-[35px]">
+                <section class="self-center mt-[35px] sm:text-center">
                     <h3 class="font-bold text-[14px] leading-[16px] mb-[14px]">Свяжись с нами</h3>
                     <ul>
-                        <li class="flex items-center gap-[7px] font-bold text-[14px] leading-[16px] mb-[7px]">
+                        <li class="flex items-center gap-[7px] font-bold text-[14px] leading-[16px] mb-[7px]
+                            sm:justify-center">
                             <img src="@icons/i__phone-green.svg" alt="Телефон">
                             <a class="link" href="tel:+372 475685">
                                 +372 475685
@@ -29,7 +31,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="self-start mt-[35px]">
+                <section class="self-center mt-[35px] sm:text-center">
                     <h3 class="font-bold text-[14px] leading-[16px] mb-[10px]">Полезные ссылки</h3>
                     <ul>
                         <li class="text-[14px] leading-[16px] mb-[7px]">

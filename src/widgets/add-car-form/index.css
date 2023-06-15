@@ -1,17 +1,21 @@
 .add-car__form {
-    @apply inline-block;
+    @apply inline-block sm:mr-[20px] sm:ml-[20px];
 }
 .add-car__form-top {
     @apply grid grid-cols-4 grid-rows-[min-content] w-max gap-x-[30px] gap-y-[17px]
+        sm:grid-cols-3 sm:w-full
+
 }
 .add-car__form-bottom {
-    @apply grid grid-cols-[max-content] gap-y-[23px] gap-x-[33px];
+    @apply grid grid-cols-[max-content] gap-y-[23px] gap-x-[33px]
+        sm:grid-cols-2;
 }
 .add-car__form-confirm {
     @apply mt-[21px];
 }
 .add-car__form-confirm p {
     @apply font-bold text-center text-[10px] leading-[12px] text-primary
+        sm:text-left sm:ml-[10px]
 }
 .add-car__form-confirm p span {
     @apply text-green text-center;

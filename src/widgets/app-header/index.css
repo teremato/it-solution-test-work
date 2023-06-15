@@ -1,6 +1,6 @@
 /* app-header */
 .app__header {
-    @apply relative h-[70px] sm:h-[94px];
+    @apply relative h-[94px] sm:h-[70px];
 }
 
 /* app-header left side */
@@ -9,23 +9,25 @@
 }
 
 .app__header-left .app__header-contacts {
-    @apply flex flex-col text-white w-max ml-[17px] sm:ml-[84px];
+    @apply flex flex-col sm:gap-[10px] text-white w-max ml-[84px] sm:ml-[17px];
 }
 
 .app__header-left .app__header-contacts-item {
-    @apply flex items-center gap-[17px];
+    @apply flex items-center gap-[17px] sm:gap-[10px];
 }
 
 /* app-header right-side */
 .app__header-right {
-    @apply absolute right-0 top-0 h-full w-[157px]
-        sm:w-[740px] bg-light-primary
-        rounded-bl-[270px] sm:rounded-bl-[293px];
+    @apply absolute right-0 top-0 h-full w-[740px]
+        sm:w-[157px] bg-light-primary
+        rounded-bl-[293px] sm:rounded-bl-[270px];
 }
 
 .app__header-right .app__header-wrapper {
-    @apply flex flex-col justify-between h-full 
-        ml-[100px] mr-[25px];
+    @apply flex flex-col justify-between h-full
+        ml-[100px] mr-[25px] 
+        sm:justify-end sm:mr-[16px] sm:ml-0 sm:flex-row;
+        
 }
 
 .app__header-right .app__header-sociaty {
