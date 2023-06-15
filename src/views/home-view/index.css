@@ -3,32 +3,22 @@
 }
 
 .home-view .home-view__add-car {
-    @apply bg-[url('@images/ill_add-car.svg')] bg-no-repeat bg-right
+    @apply bg-[url('@images/ill_add-car.svg')] bg-no-repeat bg-right 
 }
 
 .home-view .home-view__variants {
-    @apply bg-[url('@images/ill_variants.png')] bg-no-repeat bg-left mt-[37px]
+    @apply bg-[url('@images/ill_variants.png')] bg-no-repeat bg-left-bottom 
+        h-[486px] mt-[37px] mr-[66px]
 }
 
 .home-view .home-view__variants p {
-    @apply text-[12px] font-bold leading-[14px]
+    @apply text-[12px] leading-[14px]
 }
 
-
-.home-view__variants .variants-block {
-    @apply flex flex-col justify-center items-center
-        border-solid border-[1px] rounded-[10px] bg-white
-        shadow-[0px_0px_4px_rgba(0,0,0,0.25)] transition-all;
+.home-view .home-view__about {
+    @apply bg-[url('@images/ill_about.png')] bg-no-repeat bg-right-bottom
+        h-[597px] mr-[15px] ml-[74px] mb-[95px]
 }
-.home-view__variants .variants-block h3 {
-    @apply text-[18px] font-bold text-primary leading-[21px];
-}
-.home-view__variants .variants-block p {
-    @apply text-[12px] text-primary text-center leading-[14px] font-normal;
-}
-.home-view__variants .variants-block.disabled {
-    @apply w-[183px] h-[233px] border-disabled-green;
-}
-.home-view__variants .variants-block.active {
-    @apply w-[183px] h-[273px] border-green;
+.home-view .home-view__company {
+    @apply flex justify-between gap-[49px] h-[385px] mr-[41px] ml-[74px] mb-[129px]
 }

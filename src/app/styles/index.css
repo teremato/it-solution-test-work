@@ -13,13 +13,23 @@
 
 @layer components {
     .btn {
-        @apply bg-green text-white rounded-[5px]
-            text-[10px] font-bold leading-[12px] w-full
+        @apply bg-green text-white rounded-[5px] text-[10px]
+            font-bold leading-[12px] w-full transition-all
+            hover:bg-light-green
+            active:shadow-[0px_4px_4px_#E5E5E5]
+            focus:shadow-[0px_4px_4px_#E5E5E5]
     }
 }
 
 @layer utilities {
     .sub-title {
         @apply text-[18px] leading-[20px] text-primary;
+    }
+    .section-title {
+        @apply inline-block font-bold text-[24px] leading-[28px] text-primary
+            after:content-[''] after:h-[3px] after:bg-light-green after:block
+    }
+    .link {
+        @apply hover:text-light-green transition-all
     }
 }

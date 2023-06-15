@@ -1,6 +1,6 @@
 <template>
     <form class="add-car__form translate-x-[112px]">
-        <h3 class="sub-title mb-[28px] translate-x-[128px] ">
+        <h3 class="sub-title mb-[38px] translate-x-[128px] ">
             Данные автомобиля
         </h3>
         <div class="add-car__form-top">
@@ -12,7 +12,7 @@
             <app-input label="КПП" />
             <app-input label="Пробег" />
             <app-input label="Техосмотр" />
-            <app-input label="Желаемая цена" />
+            <app-input label="Желаемая цена" requried/>
             <button type="button" class="btn col-span-3 h-[29px]">
                 Добавить фото
             </button>
@@ -24,7 +24,7 @@
             <div class="add-car__form-bottom">
                 <app-input label="Имя" size="md"/>
                 <app-input label="Почта" size="lg"/>
-                <app-input label="Телефон" size="md"/>
+                <app-input label="Телефон" size="md" requried/>
                 <app-input label="Город" size="lg"/>
                 <app-textarea label="Сообщение" custom-class="col-span-2 h-[58px]"/>
             </div>
@@ -37,7 +37,7 @@
                     </p>
                 </div>
                 <span class="flex justify-center">
-                    <button class="btn mt-[15px] w-[190px] h-[22px]">
+                    <button type="submit" class="btn mt-[15px] w-[190px] h-[22px]">
                         Отправить
                     </button>
                 </span>

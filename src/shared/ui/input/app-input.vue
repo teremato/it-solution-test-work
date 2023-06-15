@@ -5,6 +5,7 @@
     ]">
         <legend class="app__input-label">
             {{ label }}
+            <span v-if="requried" class="app__input-required"></span>
         </legend>
         <input class="app__input" 
             :placeholder="placeholder"

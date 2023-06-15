@@ -4,7 +4,7 @@
             <div class="app__header-contacts">
                 <span class="app__header-contacts-item">
                     <img src="@icons/i__phone.svg" alt="contact-phone">
-                    +372 43675 476
+                    <a href="tel:+372 43675 476">+372 43675 476</a>
                 </span>
                 <span class="app__header-contacts-item">
                     <img src="@icons/i__mail.svg" alt="contact-phone">
@@ -30,7 +30,7 @@
                                 'app__header-list-item',
                                 { 'active':  idx === 0}
                             ]">
-                            <a :href="path.path">{{ path.label }}</a>
+                            <a class="link" :href="path.path">{{ path.label }}</a>
                         </li>
                         <span>
                             <img src="@icons/i__ru-flag.svg" alt="rus-lang">

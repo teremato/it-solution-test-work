@@ -10,7 +10,12 @@
 }
 
 .app__input-field .app__input {
-    @apply text-[10px] h-full w-full outline-none ml-[5px] mr-[5px];
+    @apply text-[10px] h-full w-full outline-none rounded-[5px] 
+        pl-[5px] pr-[5px] bg-white;
+}
+
+.app__input-required {
+    @apply absolute top-0 right-0 h-[3px] w-[3px] rounded-[50%] bg-green
 }
 
 .app__input-field.app__input-sm {
