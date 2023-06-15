@@ -1,0 +1,8 @@
+.app__checkbox {
+    @apply block w-[17px] h-[17px] rounded-[5px] 
+        border-border border-solid border-[1px];
+}
+
+.app__checkbox-input {
+    @apply sr-only;
+}

@@ -19,3 +19,6 @@
 .app__input-field.app__input-md {
     @apply w-[162px];
 }
+.app__input-field.app__input-lg {
+    @apply w-[190px]
+}

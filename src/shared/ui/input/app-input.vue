@@ -21,7 +21,7 @@ interface IProps {
     name?: string,
     requried?: boolean,
     block?: boolean
-    size?: 'sm' | 'md',
+    size?: 'sm' | 'md' | 'lg',
 }
 
 withDefaults(defineProps<IProps>(), {

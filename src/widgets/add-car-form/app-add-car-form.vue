@@ -13,18 +13,45 @@
             <app-input label="Пробег" />
             <app-input label="Техосмотр" />
             <app-input label="Желаемая цена" />
-            <button class="btn col-span-3 h-[29px]">
+            <button type="button" class="btn col-span-3 h-[29px]">
                 Добавить фото
             </button>
         </div>
-        <h3 class="sub-title mb-[25px] mt-[25px] translate-x-[128px]">
-            Другие данные
-        </h3>
+        <div class="w-min">
+            <h3 class="sub-title mb-[25px] mt-[25px] text-center">
+                Другие данные
+            </h3>
+            <div class="add-car__form-bottom">
+                <app-input label="Имя" size="md"/>
+                <app-input label="Почта" size="lg"/>
+                <app-input label="Телефон" size="md"/>
+                <app-input label="Город" size="lg"/>
+                <app-textarea label="Сообщение" custom-class="col-span-2 h-[58px]"/>
+            </div>
+            <div class="add-car__form-confirm">
+                <div class="grid grid-cols-[1fr_100%]">
+                    <app-checkbox />
+                    <p>
+                        Я согласен(на), что фирма использует мои личные данные на основе<br/>
+                        <span>Политики конфедициальности</span> 
+                    </p>
+                </div>
+                <span class="flex justify-center">
+                    <button class="btn mt-[15px] w-[190px] h-[22px]">
+                        Отправить
+                    </button>
+                </span>
+            </div>
+        </div>
     </form>
 </template>
 
 <script setup lang="ts">
-import { AppInput } from '@/shared/ui';
+import { 
+    AppInput,
+    AppTextarea,
+    AppCheckbox
+} from '@/shared/ui';
 
 </script>
 
