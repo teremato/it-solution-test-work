@@ -10,23 +10,23 @@
         </section>
 
         <section class="home-view__variants">
-            <div class="inline-block float-right">
+            <div class="inline-block float-right sm:block sm:float-none">
                 <header class="mb-[23px]">
                     <div class="">
-                        <img class="m-auto" src="@icons/i__logo-big.svg" alt="logo">
+                        <img class="m-auto sm:mb-[10px]" src="@icons/i__logo-big.svg" alt="logo">
                         <p class="text-center font-bold">
                             Желаешь продать машину быстро, но не хочешь заниматься этим самостоятельно?<br/>
                             Доверь нам все проблемы, связанные с продажей машины!
                         </p>
                     </div>
                 </header>
-                <app-variants-slider />
+                <app-variants-slider :active="!isMobile" />
             </div>
         </section>
 
         <section class="home-view__about">
             <div class="home-view__about-wrapper">
-                <header>
+                <header class="sm:mr-[20px] sm:ml-[20px]">
                     <h1 class="section-title after:w-[75px] mb-[21px]">
                         О нас
                     </h1>
@@ -43,26 +43,30 @@
                         для клиента место.
                     </p>
                 </header>
-                <ul class="sm:flex">
-                    <li class="flex items-center gap-[13px] mb-[47px] sm:flex-col">
+                <ul class="sm:flex sm:mr-[20px] sm:ml-[20px]">
+                    <li class="flex items-center gap-[13px] mb-[47px] sm:mb-0 sm:flex-col">
                         <img src="@icons/i__premium.svg" alt="Высокие цены">
                         <span class="font-bold text-[17px] leading-[18px] sm:text-center">
                             Предлагаем самые высокие<br/> цены
                         </span>
                     </li>
-                    <li class="flex items-center gap-[13px] mb-[43px] sm:flex-col">
+                    <li class="flex items-center gap-[13px] mb-[43px] sm:mb-0 sm:flex-col">
                         <img src="@icons/i__edit-doc.svg" alt="Оформляем на месте">
                         <span class="font-bold text-[17px] leading-[18px] sm:text-center">
                             Оформляем документы прямо на<br/> месте
                         </span>
                     </li>
                     <li class="flex items-center gap-[13px] sm:flex-col">
-                        <img src="@icons/i__like.svg" alt="В любом состоянии">
+                        <img v-if="isMobile" src="@icons/i__like.svg" alt="В любом состоянии">
+                        <img v-else src="@icons/i__like-small.svg" alt="В любом состоянии">
                         <span class="font-bold text-[17px] leading-[18px] sm:text-center">
                             Выкупаем машины в любом<br/> состоянии
                         </span>
                     </li>
                 </ul>
+                <div v-if="!isMobile" class="bg-[url('@images/ill_about-small.png')] bg-no-repeat">
+                    <img class="opacity-0" src="@images/ill_about-small.png" alt="О нас">
+                </div>
             </div>
         </section>
 
@@ -71,7 +75,7 @@
                 <h1 class="section-title after:w-[110px] mb-[17px]">
                     COMPANY NAME
                 </h1>
-                <p class="text-[15px] leading-[17px] text-primary mb-[48px]">
+                <p class="text-[15px] leading-[17px] text-primary mb-[48px] sm:mb-[20px]">
                     Каждый автовладелец хотя бы раз сталкивался с <br/>
                     необходимостью продать машину. Конечно же, вы хотите <br/>
                     селать это быстрее и с максимальной выгодой. Наши <br/>

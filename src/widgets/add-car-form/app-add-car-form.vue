@@ -1,6 +1,6 @@
 <template>
     <form class="add-car__form translate-x-[112px] sm:translate-x-0">
-        <h3 class="sub-title mb-[38px] translate-x-[128px] sm:translate-x-0 sm:text-center">
+        <h3 class="sub-title mb-[38px] translate-x-[128px] sm:mb-[26px] sm:translate-x-0 sm:text-center">
             Данные автомобиля
         </h3>
         <div class="add-car__form-top">
@@ -18,7 +18,7 @@
             </button>
         </div>
         <div class="w-min sm:w-full">
-            <h3 class="sub-title mb-[25px] mt-[25px] text-center">
+            <h3 class="sub-title mb-[25px] mt-[25px] text-center sm:mt-[30px]">
                 Другие данные
             </h3>
             <div class="add-car__form-bottom">

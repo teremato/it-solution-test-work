@@ -1,5 +1,5 @@
-.variants-block {
-    @apply flex flex-col items-center
+/* .variants-block {
+    @apply relative flex flex-col items-center
         border-solid border-[1px] bg-white
         shadow-[0px_0px_4px_rgba(0,0,0,0.25)] transition-all
         box-border pl-[10px] pr-[10px];
@@ -14,20 +14,40 @@
 }
 
 .variants-block.disabled {
-    @apply relative w-[181px] h-[233px] border-disabled-green
+    @apply w-[140px] h-[233px] border-disabled-green
         first:rounded-bl-[10px] first:rounded-tl-[10px] first:border-r-[0px]
-        last:rounded-br-[10px] last:rounded-tr-[10px] last:border-l-[0px]
+        last:rounded-br-[10px] last:rounded-tr-[10px] last:border-l-[0px] z-0
 }
 
 .variants-block.disabled img {
     @apply mt-[14px] mb-[12px]
 }
 
+.active-sldier {
+    @apply flex items-center
+}
+.active-sldier .variants-block.disabled {
+    @apply  w-[140px] h-[233px]
+        last:rounded-[10px] last:border-l-[1px] last:right-[40px]
+        first:rounded-[10px] first:border-r-[1px] first:left-[40px]
+}
 
 .variants-block.active {
-    @apply relative w-[183px] h-[273px] border-light-green rounded-[10px] z-10;
+    @apply w-[183px] h-[273px] border-light-green rounded-[10px] z-10;
 }
 
 .variants-block.active img {
     @apply mt-[30px] mb-[22px]
+} */
+
+.slider-item {
+    @apply border-solid border-[1px] bg-white
+        shadow-[0px_0px_4px_rgba(0,0,0,0.25)] transition-all
+        box-border rounded-[10px] h-full
+}
+.slider-active {
+    @apply z-10 w-[168px] h-[273px] border-light-green;
+}
+.slider-disabled {
+    @apply w-[140px] h-[233px] border-disabled-green
 }

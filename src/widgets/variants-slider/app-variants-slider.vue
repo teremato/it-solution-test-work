@@ -1,21 +1,42 @@
 <template>
-    <div class="flex items-center">
-        <div class="flex items-center">
-            <article v-for="(item, index) in slides" :key="index" 
-                :class="[
-                    'variants-block',
-                    (middle === index) ? 'active' : 'disabled'
-                ]">
-                <img class="w-min mb-[7px]" :src="setIcon(item)" alt="Быстро">
-                <h3>{{ item.title }}</h3>
-                <p v-html="item.description" class="font-normal"></p>
-            </article>
-        </div>
+    <div class="relative">
+        <swiper :slides-per-view="3"
+            :width="347"
+            :height="273"
+            centered-slides
+            effect="coverflow"
+            :coverflow-effect="{
+                rotate: 50,
+                depth: 100,
+                modifier: 1,
+                stretch: 0,
+                slideShadows: false
+            }" 
+            direction="horizontal">
+
+                <swiper-slide v-for="(item, index) in slides" :key="index"
+                    v-slot="{isActive}
+                    ">
+                    <article :class="[
+                        'slider-item',
+                        (isActive) ? 'slider-active' : 'slider-disabled'
+                    ]">
+                    </article>
+                </swiper-slide>
+        </swiper>
     </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+
+withDefaults(defineProps<{active?: boolean}>(), {
+    active: false
+});
+
 
 type Slide = {  icon: string, title: string, description: string }
 

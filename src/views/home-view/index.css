@@ -1,15 +1,16 @@
 .home-view {
-    @apply mt-[53px];
+    @apply mt-[53px] sm:mt-[32px];
 }
 
 .home-view .home-view__add-car {
     @apply bg-[url('@images/ill_add-car.svg')] bg-no-repeat bg-right
-        sm:bg-bottom sm:bg-none
+        sm:bg-bottom sm:bg-none sm:bg-contain
 }
 
 .home-view .home-view__variants {
     @apply bg-[url('@images/ill_variants.png')] bg-no-repeat bg-left-bottom 
         h-[486px] mt-[37px] mr-[66px]
+        sm:bg-none sm:mr-0 sm:mt-[50px]
 }
 
 .home-view .home-view__variants p {
@@ -19,9 +20,10 @@
 .home-view .home-view__about {
     @apply bg-[url('@images/ill_about.png')] bg-no-repeat bg-right-bottom
         h-[597px] mr-[15px] ml-[74px] mb-[95px]
-        sm:h-full sm:bg-none sm:mr-[20px] sm:ml-[20px]
+        sm:h-full sm:bg-none sm:mr-0 sm:ml-0
 }
 .home-view .home-view__company {
     @apply flex justify-between gap-[49px] h-[385px] mr-[41px] ml-[74px] mb-[129px]
         sm:h-auto sm:ml-[20px] sm:mr-[20px] sm:justify-normal sm:flex-col
+        sm:gap-[33px] sm:mb-[80px]
 }

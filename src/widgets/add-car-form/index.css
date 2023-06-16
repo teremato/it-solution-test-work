@@ -8,7 +8,7 @@
 }
 .add-car__form-bottom {
     @apply grid grid-cols-[max-content] gap-y-[23px] gap-x-[33px]
-        sm:grid-cols-2;
+        sm:grid-cols-2 sm:gap-y-[26px] sm:gap-x-[20px];
 }
 .add-car__form-confirm {
     @apply mt-[21px];
