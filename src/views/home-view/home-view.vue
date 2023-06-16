@@ -14,13 +14,12 @@
                 <header class="mb-[23px]">
                     <div class="">
                         <img class="m-auto sm:mb-[10px]" src="@icons/i__logo-big.svg" alt="logo">
-                        <p class="text-center font-bold">
+                        <p class="text-[12px] leading-[14px] text-center font-bold">
                             Желаешь продать машину быстро, но не хочешь заниматься этим самостоятельно?<br/>
                             Доверь нам все проблемы, связанные с продажей машины!
                         </p>
                     </div>
                 </header>
-                <app-variants-slider :active="!isMobile" />
             </div>
         </section>
 
@@ -165,7 +164,7 @@
 <script setup lang="ts">
 import { 
     AddCarForm,
-    AppVariantsSlider
+    AppSlider
 } from '@/widgets';
 import { useWindowResize } from '@/shared/hooks';
 
