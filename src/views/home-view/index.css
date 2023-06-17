@@ -23,3 +23,6 @@
         sm:h-auto sm:ml-[20px] sm:mr-[20px] sm:justify-normal sm:flex-col
         sm:gap-[33px] sm:mb-[80px]
 }
+.home-view .home-view__company-quality br {
+    @apply sm:hidden
+}

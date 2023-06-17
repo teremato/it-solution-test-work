@@ -1,0 +1,4 @@
+.app__sidebar {
+    @apply fixed right-0 top-0 z-50 transition-all
+        h-full pl-[34px] pr-[15px] bg-light-primary text-white
+}

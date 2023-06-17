@@ -29,7 +29,7 @@
                     </div>
                     <nav class="app__header-nav">
                         <ul class="app__header-list">
-                            <li v-for="(path, idx) in paths" :key="path.path"
+                            <li v-for="(path, idx) in links" :key="path.path"
                                 :class="[
                                     'app__header-list-item',
                                     { 'active':  idx === 0}
@@ -42,7 +42,7 @@
                         </ul>
                     </nav>
                 </template>
-                <button v-else class="self-center">
+                <button v-else @click="emit('sidebar-change')" class="self-center">
                     <img src="@icons/i__burger.svg" alt="Боковое меню">
                 </button>
             </div>
@@ -53,17 +53,18 @@
 <script setup lang="ts">
 import { useWindowResize } from '@/shared/hooks';
 
+withDefaults(
+    defineProps<{ links: { label:string, path: string, icon: string}[] }>(), {
+        links: () => []
+    }
+)
+
+const emit = defineEmits<{
+    (e: 'sidebar-change'): void
+}>()
+
+
 const { isMobile } = useWindowResize();
-
-
-const paths: { label:string, path: string }[] = [
-    { label: 'главная ', path: '/' },
-    { label: 'о нас', path: '/about' },
-    { label: 'отправьте нам предложение', path: '/feedback' },
-    { label: 'чзв', path: '/chzf' },
-    { label: 'блог', path: '/blog' },
-    { label: 'контакты', path: 'contacts' },
-]
 
 </script>
 

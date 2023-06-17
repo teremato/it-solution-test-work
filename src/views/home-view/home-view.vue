@@ -20,6 +20,7 @@
                         </p>
                     </div>
                 </header>
+                <app-slider :slides="slides" :slider-active="!isMobile"/>
             </div>
         </section>
 
@@ -113,48 +114,12 @@
                     </li>
                 </ul>
             </div>
-            <ul class="self-end sm:self-start">
-                <li class="flex items-align gap-[19px] mb-[23px]">
+            <ul class="home-view__company-quality self-end sm:self-start">
+                <li v-for="(item, index) in qualityList" :key="index" 
+                    class="flex items-align gap-[19px] mb-[23px]" >
+
                     <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Машину не надо подготавливать <br class="sm:hidden"/>к продаже
-                    </span>
-                </li>
-                <li class="flex items-align gap-[19px] mb-[23px]">
-                    <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Покупаем машины любого года выпуска и в<br class="sm:hidden"/> любом состоянии
-                    </span>
-                </li>
-                <li class="flex items-align gap-[19px] mb-[23px]">
-                    <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Покупаем машины без техосмотра и<br class="sm:hidden"/>страховки
-                    </span>
-                </li>
-                <li class="flex items-align gap-[19px] mb-[23px]">
-                    <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Покупаем машины не работающие и<br class="sm:hidden"/> нуждающиеся в ремонте
-                    </span>
-                </li>
-                <li class="flex items-align gap-[19px] mb-[23px]">
-                    <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Предложим за вашу машину больше<br class="sm:hidden"/> остальных
-                    </span>
-                </li>
-                <li class="flex items-align gap-[19px] mb-[23px]">
-                    <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Сразу же выплачиваем<br class="sm:hidden" /> деньги
-                    </span>
-                </li>
-                <li class="flex items-align gap-[19px]">
-                    <img src="@icons/i__toggle-small.svg" alt="Почему нужно выбрать нас!">
-                    <span class="text-[15px] font-bold text-primary leading-[17px]">
-                        Работаем по всей Эстонии и сами<br class="sm:hidden" /> выезжаем на место
-                    </span>
+                    <span v-html="item.label" class="text-[15px] font-bold text-primary leading-[17px]"></span>
                 </li>
             </ul>
         </section>
@@ -171,6 +136,42 @@ import { useWindowResize } from '@/shared/hooks';
 
 const { isMobile } = useWindowResize();
 
+const slides = [
+{ 
+        title: 'Быстро', 
+        description: `Наша цель помочь вам продать машину как<br/>
+            можно быстрее, оформив все необходимые<br/> 
+            докуметы в ускоренном порядке, и мы<br/> 
+            сделаем для этого всё от себя зависящее.<br/>`,
+        icon: 'i__clock'
+    },
+    { 
+        title: 'Просто', 
+        description: `Мы купим вашу машину при любом условии!<br/>
+            Не важно есть ли на ней техосмотр, нуждается<br/>
+            ли она в ремонте или имеет неисправности;<br/> 
+            Мы приобритём вашу машину без лишних<br/> 
+            задержек и вопросов.<br/>`,
+        icon: 'i__toggle'
+    },
+    { 
+        title: 'Прибыльно', 
+        description: `Разумеется вы хотели бы продать свою<br/> 
+            машину с максимальной выгодой. Мы<br/>
+            способны предложить вам за ваш автомобиль<br/> 
+            самую высокую цену на рынке.<br/>`,
+        icon: 'i__euro'
+    },
+]
+const qualityList = [
+    { label: 'Машину не надо подготавливать <br/>к продаже' },
+    { label: 'Покупаем машины любого года выпуска и в<br/> любом состоянии' },
+    { label: 'Покупаем машины без техосмотра и<br/>страховки' },
+    { label: 'Покупаем машины не работающие и<br/> нуждающиеся в ремонте' },
+    { label: 'Предложим за вашу машину больше<br/> остальных' },
+    { label: 'Сразу же выплачиваем<br/> деньги' },
+    { label: 'Работаем по всей Эстонии и сами<br/> выезжаем на место' },
+]
 </script>
 
 <style lang="css" src="./index.css">

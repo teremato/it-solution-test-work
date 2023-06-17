@@ -3,7 +3,7 @@
         <div class="bg-light-primary h-[152px] sm:h-full">
             <div class="grid grid-cols-4 h-full text-white
                 sm:grid-cols-1 sm:justify-items-center">
-                <h1 class=" m-auto text-[48px] leading-[55px] sm:mt-[37px] sm:mb-[30px] sm:row-start-1">
+                <h1 class="m-auto text-[48px] leading-[55px] sm:mt-[37px] sm:mb-[30px] sm:row-start-1">
                     LOGO
                 </h1>
                 <section class="mt-[35px] sm:text-center sm:mt-0 sm:mb-[20px]">
