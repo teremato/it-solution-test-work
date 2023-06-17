@@ -12,7 +12,7 @@
         </header>
         <ul>
             <li v-for="link in links" :key="link.path"
-                class="flex items-center gap-x-[10px]
+                class="flex items-center gap-x-[18px]
                     text-[18px] leading-[21px] font-black mb-[55px] uppercase">
                 <img :src="setIcon(link.icon)" :alt="link.label">
                 <a :href="link.label">{{ link.label }}</a>

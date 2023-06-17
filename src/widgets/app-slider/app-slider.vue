@@ -19,6 +19,7 @@
             <SwiperSlide v-for="(item, idx) in slides" :key="idx"
                 :class="{ 'self-center': index !== idx }"
                 v-slot="{ isActive }">
+                <!-- как сделать норм расположение :(( -->
                 <article class="slider-item" :class="[
                     { 'slider-active': isActive },
                     { 'slider-disabled': !isActive },

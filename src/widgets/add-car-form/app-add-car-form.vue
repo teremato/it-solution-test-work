@@ -30,7 +30,7 @@
             </div>
             <div class="add-car__form-confirm">
                 <div class="grid grid-cols-[1fr_100%]">
-                    <app-checkbox />
+                    <app-checkbox v-model:checked="form.agreed"/>
                     <p>
                         Я согласен(на), что фирма использует мои личные данные на основе<br/>
                         <span>Политики конфедициальности</span> 
@@ -53,10 +53,13 @@ import {
     AppCheckbox
 } from '@/shared/ui';
 import { useWindowResize } from '@/shared/hooks';
+import { ref } from 'vue';
 
 
 const { isMobile } = useWindowResize();
-
+const form = ref({
+    agreed: false
+})
 </script>
 
 <style lang="css" scoped src="./index.css">

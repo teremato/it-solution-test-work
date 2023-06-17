@@ -16,7 +16,7 @@ module.exports = {
         'border': '#CCCCCC',
       },
       fontFamily: {
-        sans: ['Roboto'],
+        sans: ['Arimo'],
       },
     },
     screens: {
