@@ -13,9 +13,12 @@
             <app-input label="Пробег" :block="!isMobile"/>
             <app-input label="Техосмотр" :block="!isMobile"/>
             <app-input label="Желаемая цена" requried :block="!isMobile"/>
-            <button type="button" class="btn col-span-3 h-[29px]">
-                Добавить фото
-            </button>
+            <label type="button" class="btn cursor-pointer flex justify-center items-center 
+                col-span-3 h-[29px] text-center">
+
+                <span>Добавить фото</span>
+                <input type="file" class="sr-only"/>
+            </label>
         </div>
         <div class="w-min sm:w-full">
             <h3 class="sub-title mb-[25px] mt-[25px] text-center sm:mt-[30px]">
